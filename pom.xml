@@ -12,8 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>11.0.10</maven.compiler.release>
-    <versions-maven-plugin.version>2.8.1</versions-maven-plugin.version>
+    <maven.compiler>11.0.10</maven.compiler>
+    <versions-maven-plugin.version>3.6.0</versions-maven-plugin.version>
   </properties>
 
   <dependencies>
