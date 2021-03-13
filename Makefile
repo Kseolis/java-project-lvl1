@@ -10,5 +10,5 @@ update:
 	./mvnw versions:display-property-updates
 	./mvnw versions:update-properties
 
-make lint:
+lint:
 	./mvnw checkstyle:check
