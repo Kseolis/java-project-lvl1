@@ -9,3 +9,6 @@ update:
 	./mvnw versions:display-plugin-updates
 	./mvnw versions:display-property-updates
 	./mvnw versions:update-properties
+
+make lint:
+	./mvnw checkstyle:check
