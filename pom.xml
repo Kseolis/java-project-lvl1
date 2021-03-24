@@ -13,12 +13,9 @@
   <url>http://www.example.com</url>
 
   <properties>
-    <java.version>11.0.10</java.version>
-    <maven.version>3.6.0</maven.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>${java.version}</maven.compiler.source>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
-    <maven.compiler.release>${java.version}</maven.compiler.release>
+    <maven.compiler>11.0.10</maven.compiler>
+    <versions-maven-plugin.version>3.6.0</versions-maven-plugin.version>
   </properties>
 
   <dependencies>

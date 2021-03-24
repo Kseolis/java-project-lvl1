@@ -3,15 +3,15 @@ package hexlet.code.model;
 public class Player {
     private String player;
 
-    public Player(final String player) {
-        this.player = player;
+    public Player(final String p) {
+        this.player = p;
     }
 
-    public String getPlayer() {
+    public final String getPlayer() {
         return player;
     }
 
-    public void setPlayer(final String player) {
-        this.player = player;
+    public final void setPlayer(final String p) {
+        this.player = p;
     }
 }
