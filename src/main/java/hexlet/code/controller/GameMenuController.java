@@ -7,12 +7,11 @@ import java.util.Scanner;
 
 public class GameMenuController {
     private static final Scanner ITEM_SCANNER = new Scanner(System.in);
-    private static int item;
     private static final Games GAMES = new Games(0);
 
-    public static void menuItemSelection() {
+    public final void menuItemSelection() {
         menuCall();
-        item = ITEM_SCANNER.nextInt();
+        int item = ITEM_SCANNER.nextInt();
         itemWork(item);
     }
 
@@ -25,16 +24,15 @@ public class GameMenuController {
         System.out.print("Your choice: ");
     }
 
-    private static void itemWork(final int num) {
+    private void itemWork(final int num) {
         switch (num) {
             case 0:
                 return;
             case 1:
                 Cli.welcome();
-            case 2:
-                new Games(item);
             default:
-                break;
+                GAMES.setChoiceGame(num);
+                GamesController.startGame();
         }
     }
 }

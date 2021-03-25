@@ -27,4 +27,28 @@ public class EvenGame {
     public final int getMaximum() {
         return maximum;
     }
+
+    public final String getGameRule() {
+        return "Answer 'yes' if number even, otherwise answer 'no'.";
+    }
+
+    public final String getQuestion() {
+        return "Question: ";
+    }
+
+    public final String getYourAnswer() {
+        return "Your answer: ";
+    }
+
+    public final String getFailText() {
+        return " is wrong answer ;(. Correct answer was ";
+    }
+
+    public final String getSuccessText() {
+        return "Correct!";
+    }
+
+    public final String getWinText() {
+        return "Congratulations! ";
+    }
 }
