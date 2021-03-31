@@ -12,7 +12,7 @@ public class GreetController {
         System.out.println(Greet.getWelcomeText());
         System.out.print(Greet.getAskNameText());
         String playerName = PLAYER_NAME_SCANNER.next();
-        final Player player = new Player(playerName);
+        Player.setPlayer(playerName);
         final String hello =  "Hello, " + playerName + "!";
         System.out.println(hello);
     }

@@ -2,20 +2,20 @@ package hexlet.code.controller;
 
 import hexlet.code.Cli;
 import hexlet.code.model.EvenGame;
-import hexlet.code.model.Player;
 
 import java.util.Scanner;
+
+import static hexlet.code.model.Player.getPlayer;
 
 public class EvenController {
     private static final EvenGame EVEN_GAME = new EvenGame(1, 100);
     private static int randomNumber;
     private static final Scanner QUESTION_SCANNER = new Scanner(System.in);
-    private static final String PLAYER = Player.getPlayer();
     private static final int VICTORY_CONDITION = 3;
     private static final String YES = "yes";
     private static final String NO = "no";
     private static String received;
-    private static int counter = 0;
+    private static int counter;
 
     public static void startEvenGame() {
         Cli.welcome();
@@ -23,24 +23,31 @@ public class EvenController {
     }
 
     private static void evenGameLogic() {
-        randomNumber = EVEN_GAME.getRandomNumber();
-        final String expected = checkNumberForEvenness();
-        String expectedResult = checkAnswer(expected);
-        startGameDialog();
-        if (expectedResult.equals(received) && counter < VICTORY_CONDITION) {
-            counter += 1;
-            System.out.println(EVEN_GAME.getSuccessText());
-            evenGameLogic();
-        } else if (!expectedResult.equals(received)) {
-            System.out.println(received
-                    + EVEN_GAME.getFailText()
-                    + expected
-                    + ".");
-            System.out.println("Let's try again, " + PLAYER + "!");
-            evenGameLogic();
-        }
-        if (counter == VICTORY_CONDITION) {
-            System.out.println(EVEN_GAME.getWinText() + PLAYER);
+        String playerName = getPlayer();
+
+        while (counter < VICTORY_CONDITION) {
+
+            randomNumber = EVEN_GAME.getRandomNumber();
+            final String expected = checkNumberForEvenness();
+            String expectedResult = checkAnswer(expected);
+
+            startGameDialog();
+            checkReceived();
+
+            if (expectedResult.equals(received)) {
+                counter += 1;
+                System.out.println(counter);
+                System.out.println(EVEN_GAME.getSuccessText());
+            } else {
+                System.out.println(received
+                        + EVEN_GAME.getFailText()
+                        + expected
+                        + ".");
+                System.out.println("Let's try again, " + playerName + "!");
+            }
+            if (counter == VICTORY_CONDITION) {
+                System.out.println(EVEN_GAME.getWinText() + playerName);
+            }
         }
         // TODO дописать вызов числа и проверку.
     }
@@ -50,7 +57,6 @@ public class EvenController {
             System.out.println(EVEN_GAME.getGameRule());
         }
         System.out.println(EVEN_GAME.getQuestion() + randomNumber);
-        checkReceived();
     }
 
     private static String checkNumberForEvenness() {
