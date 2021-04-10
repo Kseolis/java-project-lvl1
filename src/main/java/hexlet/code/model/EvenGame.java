@@ -1,54 +1,29 @@
 package hexlet.code.model;
 
+import static hexlet.code.model.Game.getCounter;
+
 /**
  * EvenGame - класс, модель для игры.
  */
-public class EvenGame {
-    /**
-     * min - минимальное из случайных чисел, для игры "Проверка на чётность".
-     * max - максимальное из случайных чисел, для игры "Проверка на чётность".
-     */
-    private final int minimum;
-    private final int maximum;
+public class EvenGame implements GameInterface {
+    private static final String NO = "no";
+    private static final String YES = "yes";
+    private static String expected;
 
-    public EvenGame(final int min, final int max) {
-        this.minimum = min;
-        this.maximum = max;
+    @Override
+    public final void gameLogic(final int randomNumber) {
+        while (getCounter() < VICTORY_CONDITION) {
+            isEven(randomNumber);
+
+        }
     }
 
-    public final int getRandomNumber() {
-        return (int) ((Math.random() * (maximum - minimum)) + minimum);
+    private static void isEven(final int number) {
+        expected = number % 2 == 0 ? YES : NO;
     }
 
-    public final int getMinimum() {
-        return minimum;
-    }
-
-    public final int getMaximum() {
-        return maximum;
-    }
-
-    public final String getGameRule() {
-        return "Answer 'yes' if number even, otherwise answer 'no'.";
-    }
-
-    public final String getQuestion() {
-        return "Question: ";
-    }
-
-    public final String getYourAnswer() {
-        return "Your answer: ";
-    }
-
-    public final String getFailText() {
-        return " is wrong answer ;(. Correct answer was ";
-    }
-
-    public final String getSuccessText() {
-        return "Correct!";
-    }
-
-    public final String getWinText() {
-        return "Congratulations! ";
+    @Override
+    public final boolean checkCorrectAnswer(final String answer) {
+        return expected.equals(answer);
     }
 }
