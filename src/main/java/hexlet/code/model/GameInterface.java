@@ -5,8 +5,6 @@ public interface GameInterface {
     int MINIMUM = 1;
     int MAXIMUM = 100;
 
-    void gameLogic();
-
     boolean checkCorrectAnswer(String answer);
 
     static int getRandom() {

@@ -14,12 +14,8 @@ public class EvenGame implements GameInterface {
     }
 
     @Override
-    public final void gameLogic() {
-        isEven(random);
-    }
-
-    @Override
     public final boolean checkCorrectAnswer(final String answer) {
+        isEven(random);
         return expected.equals(answer);
     }
 

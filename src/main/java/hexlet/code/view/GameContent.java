@@ -3,7 +3,6 @@ package hexlet.code.view;
 public class GameContent {
     static final String ASK_ANSWER_TEXT = "Your answer: ";
     static final String QUESTION_TEXT = "Question: ";
-    static final String INCORRECT_INPUT_TEXT = "incorrect input, try again!";
     static final String FAIL_TEXT = " is wrong answer ;(. Correct answer was ";
 
     static final String SUCCESS_TEXT =  "Correct!";

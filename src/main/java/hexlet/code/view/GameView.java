@@ -3,9 +3,13 @@ package hexlet.code.view;
 import hexlet.code.Cli;
 
 import static hexlet.code.model.Player.getPlayer;
+
 import static hexlet.code.view.GameContent.GAME_RULES;
 import static hexlet.code.view.GameContent.QUESTION_TEXT;
 import static hexlet.code.view.GameContent.ASK_ANSWER_TEXT;
+import static hexlet.code.view.GameContent.FAIL_TEXT;
+import static hexlet.code.view.GameContent.SUCCESS_TEXT;
+import static hexlet.code.view.GameContent.WIN_TEXT;
 
 public class GameView {
     private static final String[] GAME_MENU = {"Exit", "Greet", "Even", "Calc"};
@@ -35,6 +39,18 @@ public class GameView {
 
     public static void processGameDialog(final int num) {
         System.out.println(QUESTION_TEXT + num);
-        System.out.println(ASK_ANSWER_TEXT);
+        System.out.print(ASK_ANSWER_TEXT);
+    }
+
+    public static void getFailText() {
+        System.out.println(FAIL_TEXT);
+    }
+
+    public static void getSuccessText() {
+        System.out.println(SUCCESS_TEXT);
+    }
+
+    public static void getWinText() {
+        System.out.println(WIN_TEXT);
     }
 }
