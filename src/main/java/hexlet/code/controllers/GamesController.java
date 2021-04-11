@@ -9,11 +9,13 @@ import static hexlet.code.view.GameView.menuCall;
 import static hexlet.code.view.GameView.startGameDialog;
 
 public class GamesController {
-    private static final Scanner ITEM_SCANNER = new Scanner(System.in);
-    private int gameNumber = 0;
 
+    private int gameNumber = 0;
     private static final int EVEN_GAME = 2;
     private static final int CALC_GAME = 3;
+
+    protected static final Scanner ITEM_SCANNER = new Scanner(System.in);
+
 
     public final void gameFlow() {
         menuCall();

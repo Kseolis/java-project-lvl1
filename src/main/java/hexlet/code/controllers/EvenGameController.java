@@ -14,7 +14,7 @@ public class EvenGameController {
             int randomNumber = getRandom();
             EvenGame evenGame = new EvenGame(randomNumber);
             processGameDialog(randomNumber);
-            evenGame.gameLogic();
+
         }
     }
 }
