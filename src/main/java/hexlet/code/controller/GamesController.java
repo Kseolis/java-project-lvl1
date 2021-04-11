@@ -3,31 +3,41 @@ package hexlet.code.controller;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static hexlet.code.controller.CalcGameController.startCalcGame;
+import static hexlet.code.controller.EvenGameController.startEvenGame;
 import static hexlet.code.view.App.menuCall;
 import static hexlet.code.view.App.startGameDialog;
 
 public class GamesController {
     private static final Scanner ITEM_SCANNER = new Scanner(System.in);
-    private int game = 0;
+    private int gameNumber = 0;
 
     private static final int EVEN_GAME = 2;
     private static final int CALC_GAME = 3;
 
-    public final void startGame() {
+    public final void gameFlow() {
         menuCall();
         tryScanNumber();
+        gameInitialization();
     }
 
-    public final boolean gameFlow() {
-        return game == EVEN_GAME;
+    public final void gameInitialization() {
+        switch (gameNumber) {
+            case EVEN_GAME:
+                startEvenGame();
+            case CALC_GAME:
+                startCalcGame();
+            default:
+                break;
+        }
     }
 
     private void tryScanNumber() {
         boolean validInput = false;
         do {
             try {
-                game = ITEM_SCANNER.nextInt();
-                startGameDialog(game);
+                gameNumber = ITEM_SCANNER.nextInt();
+                startGameDialog(gameNumber);
                 validInput = true;
             } catch (ArrayIndexOutOfBoundsException
                     | InputMismatchException e) {

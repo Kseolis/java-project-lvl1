@@ -14,7 +14,7 @@ public class App<T> {
     private static final int ONLY_GREET_CHOICE = 1;
 
     public static void main(final String[] args) {
-        GAMES_CONTROLLER.startGame();
+        GAMES_CONTROLLER.gameFlow();
     }
 
     // Вызов меню для выбора игры.
