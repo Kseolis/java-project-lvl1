@@ -1,10 +1,10 @@
-package hexlet.code.controller;
+package hexlet.code.controllers;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static hexlet.code.controller.CalcGameController.startCalcGame;
-import static hexlet.code.controller.EvenGameController.startEvenGame;
+import static hexlet.code.controllers.CalcGameController.startCalcGame;
+import static hexlet.code.controllers.EvenGameController.startEvenGame;
 import static hexlet.code.view.App.menuCall;
 import static hexlet.code.view.App.startGameDialog;
 

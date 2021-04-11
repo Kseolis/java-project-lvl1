@@ -1,7 +1,7 @@
 package hexlet.code.view;
 
 import hexlet.code.Cli;
-import hexlet.code.controller.GamesController;
+import hexlet.code.controllers.GamesController;
 
 import static hexlet.code.view.GameContent.GAME_RULES;
 import static hexlet.code.view.GameContent.QUESTION_TEXT;
