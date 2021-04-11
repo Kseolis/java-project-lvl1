@@ -4,7 +4,7 @@ public class CalcGame implements GameInterface {
     private int operationResult;
 
     @Override
-    public void gameLogic(final int number) {
+    public void gameLogic() {
 
     }
 

@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 import static hexlet.code.controllers.CalcGameController.startCalcGame;
 import static hexlet.code.controllers.EvenGameController.startEvenGame;
-import static hexlet.code.view.App.menuCall;
-import static hexlet.code.view.App.startGameDialog;
+import static hexlet.code.view.GameView.menuCall;
+import static hexlet.code.view.GameView.startGameDialog;
 
 public class GamesController {
     private static final Scanner ITEM_SCANNER = new Scanner(System.in);

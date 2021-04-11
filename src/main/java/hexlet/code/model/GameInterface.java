@@ -5,7 +5,7 @@ public interface GameInterface {
     int MINIMUM = 1;
     int MAXIMUM = 100;
 
-    void gameLogic(int number);
+    void gameLogic();
 
     boolean checkCorrectAnswer(String answer);
 
