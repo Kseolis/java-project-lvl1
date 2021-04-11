@@ -15,4 +15,11 @@ public class GameContent {
 
     static final String CALC_GAME_RULE =
             "What is the result of the expression?";
+
+    static final String[] GAME_RULES = {
+            null,
+            null,
+            EVEN_GAME_RULE,
+            CALC_GAME_RULE
+    };
 }

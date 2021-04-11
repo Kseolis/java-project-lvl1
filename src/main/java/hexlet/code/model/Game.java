@@ -23,7 +23,7 @@ public class Game {
         return gameState;
     }
 
-    public final void setChoiceGame(final int num) {
+    public static void setChoiceGame(final int num) {
         choiceGame = num;
     }
 
