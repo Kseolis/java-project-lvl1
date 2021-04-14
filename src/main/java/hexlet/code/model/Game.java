@@ -1,6 +1,7 @@
 package hexlet.code.model;
 
 public class Game {
+    private static final int VICTORY_CONDITION = 3;
     private static int choiceGame;
 
     private static boolean gameState;
@@ -21,6 +22,10 @@ public class Game {
 
     public static boolean isGameState() {
         return gameState;
+    }
+
+    public static int getVictoryCondition() {
+        return VICTORY_CONDITION;
     }
 
     public static void setChoiceGame(final int num) {

@@ -6,20 +6,26 @@ package hexlet.code.model;
 public class EvenGame implements GameInterface {
     private static final String NO = "no";
     private static final String YES = "yes";
-    private final int random;
-    private static String expected;
+    private static int randomNumber;
 
-    public EvenGame(final int r) {
-        this.random = r;
-    }
+    private static String correctAnswer;
 
     @Override
-    public final boolean checkCorrectAnswer(final String answer) {
-        isEven(random);
-        return expected.equals(answer);
+    public final boolean checkPlayerAnswer(final String answer) {
+        isEven(randomNumber);
+        return correctAnswer.equals(answer);
     }
 
     private static void isEven(final int number) {
-        expected = number % 2 == 0 ? YES : NO;
+        correctAnswer = number % 2 == 0 ? YES : NO;
+    }
+
+    public static int randomNumber() {
+        randomNumber = (int) ((Math.random() * (MAXIMUM - MINIMUM)) + MINIMUM);
+        return randomNumber;
+    }
+
+    public static String getCorrectAnswer() {
+        return correctAnswer;
     }
 }

@@ -42,8 +42,9 @@ public class GameView {
         System.out.print(ASK_ANSWER_TEXT);
     }
 
-    public static void getFailText() {
-        System.out.println(FAIL_TEXT);
+    public static void getFailText(final String playerAnswer,
+                                   final String correctAnswer) {
+        System.out.println(playerAnswer + FAIL_TEXT + correctAnswer);
     }
 
     public static void getSuccessText() {
