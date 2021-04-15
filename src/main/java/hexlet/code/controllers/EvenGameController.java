@@ -10,7 +10,6 @@ import static hexlet.code.model.Game.setCounter;
 import static hexlet.code.model.Game.getCounter;
 import static hexlet.code.model.Game.getVictoryCondition;
 
-
 import static hexlet.code.view.GameView.processGameDialog;
 import static hexlet.code.view.GameView.getSuccessText;
 import static hexlet.code.view.GameView.getFailText;

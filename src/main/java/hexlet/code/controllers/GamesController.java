@@ -3,7 +3,7 @@ package hexlet.code.controllers;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static hexlet.code.controllers.CalcGameController.startCalcGame;
+import static hexlet.code.controllers.CalcGameController.playCalcGame;
 import static hexlet.code.controllers.EvenGameController.playEvenGame;
 import static hexlet.code.view.GameView.menuCall;
 import static hexlet.code.view.GameView.startGameDialog;
@@ -28,7 +28,7 @@ public class GamesController {
             case EVEN_GAME:
                 playEvenGame();
             case CALC_GAME:
-                startCalcGame();
+                playCalcGame();
             default:
                 break;
         }

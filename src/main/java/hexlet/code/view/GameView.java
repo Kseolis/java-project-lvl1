@@ -11,7 +11,7 @@ import static hexlet.code.view.GameContent.FAIL_TEXT;
 import static hexlet.code.view.GameContent.SUCCESS_TEXT;
 import static hexlet.code.view.GameContent.WIN_TEXT;
 
-public class GameView {
+public class GameView<T> {
     private static final String[] GAME_MENU = {"Exit", "Greet", "Even", "Calc"};
     private static final int ONLY_GREET_CHOICE = 1;
 
@@ -37,8 +37,8 @@ public class GameView {
         }
     }
 
-    public static void processGameDialog(final int num) {
-        System.out.println(QUESTION_TEXT + num);
+    public static <T> void processGameDialog(final T question) {
+        System.out.println(QUESTION_TEXT + question);
         System.out.print(ASK_ANSWER_TEXT);
     }
 
